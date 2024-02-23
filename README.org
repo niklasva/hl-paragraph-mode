@@ -2,6 +2,8 @@
 #+DESCRIPTION:  Minor mode for highlighting text blocks
 Minor mode for highlighting text blocks under the cursor. Similar to the built-in hl-line mode.
 
+[[file:screenshots/hl-line.png]]
+
 ** Installation
 #+begin_src emacs-lisp
 (add-to-list 'load-path "/path/to/hl-text-block-mode")
@@ -19,7 +21,7 @@ To change it so only the text inside the block is highlighted, set its value to 
 (setq hl-text-block-highlight-entire-line nil)
 #+end_src
 
-
+[[file:screenshots/hl-chars.png]]
 
 The face ~hl-text-block-face~ can be customized. By default it inherits its attributes from ~hl-line~.
 #+begin_src emacs-lisp
