@@ -20,4 +20,10 @@ By default ~hl-text-block-mode~ will highlight the full lines inside text blocks
 #+end_src
 This changes it to only highlight the text inside the blocks.
 
-The face ~hl-text-block-face~ can be customized. By default it inherits ~hl-line~.
+The face ~hl-text-block-face~ can be customized.
+#+begin_src emacs-lisp
+(set-face-attribute 'hl-text-block-face nil :background "yellow")
+#+end_src
+This makes the background of the highlighted text yellow.
+
+By default ~hl-text-block-face~ inherits from ~hl-line~.
