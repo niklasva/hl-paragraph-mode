@@ -1,31 +1,30 @@
-#+TITLE:        hl-text-block-mode
-#+DESCRIPTION:  Minor mode for highlighting text blocks
-Minor mode for highlighting text blocks under the cursor. Similar to the built-in hl-line mode.
+#+TITLE:        hl-paragraph-mode
+#+DESCRIPTION:  Minor mode for highlighting paragraphs
+Minor mode for highlighting paragraphs under the cursor. Similar to the built-in hl-line mode.
 
 [[file:screenshots/hl-line.png]]
 
 ** Installation
 #+begin_src emacs-lisp
-(add-to-list 'load-path "/path/to/hl-text-block-mode")
-(require 'hl-text-block-mode)
+(add-to-list 'load-path "/path/to/hl-paragraph-mode")
+(require 'hl-paragraph-mode)
 #+end_src
 
 ** Usage
-~(hl-text-block-mode)~ enables the mode locally.
-~(hl-text-block-global-mode)~ enables it globally.
+~(hl-paragraph-mode)~ enables the mode locally.
+~(hl-paragraph-global-mode)~ enables it globally.
 
 ** Customizations
-By default ~hl-text-block-mode~ will highlight the full lines inside text blocks.
-To change it so only the text inside the block is highlighted, set its value to nil.
+By default ~hl-paragraph-mode~ will highlight the lines in a paragraph.
+To change it so only the text inside the paragraph is highlighted, set its value to nil.
 #+begin_src emacs-lisp
-(setq hl-text-block-highlight-entire-line nil)
+(setq hl-paragraph-highlight-entire-line nil)
 #+end_src
 
 [[file:screenshots/hl-chars.png]]
 
-The face ~hl-text-block-face~ can be customized. By default it inherits its attributes from ~hl-line~.
+The face ~hl-paragraph-face~ can be customized. By default it inherits its attributes from ~hl-line~.
 #+begin_src emacs-lisp
-(set-face-attribute 'hl-text-block-face nil :background "yellow")
+(set-face-attribute 'hl-paragraph-face nil :background "yellow")
 #+end_src
 This makes the background of the highlighted text yellow.
-
